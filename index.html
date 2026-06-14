@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en" class="no-scroll">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Danaria & Celly</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="countdown-bundle.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="no-scroll">
+<!----===lagu===---->
+    <audio id="bgMusic" loop>
+      <source src="Safira Inema - Kusuma Wijaya ( Official Music Video ) Kusumaning ratri mung sawiji.mp3" type="audio/mpeg">
+    </audio>
+    <div id="musik-wrap" class="musik-wrap d-none">
+      <button id="musik-btn" class="musik-btn" onclick="toggleMusik()" title="Play / Pause">
+        <span class="musik-disc"><i class="bi bi-music-note"></i></span>
+      </button>
+    </div>
+    <div id="layar-nama" class="layar-nama">
+      <div class="layar-nama-inner">
+        <p class="layar-nama-sub">The Wedding of</p>
+        <h1 class="layar-nama-judul">Celly <span>&</span> Danar</h1>
+        <div class="garis-emas-nama"></div>
+        <p class="layar-nama-desc">Silakan masukkan nama Anda<br>untuk membuka undangan ini</p>
+        <div class="layar-nama-input-wrap">
+          <i class="bi bi-person-heart layar-nama-icon"></i>
+          <input type="text" id="input-nama-tamu" class="layar-nama-input" placeholder="Nama lengkap Anda..." autocomplete="off" maxlength="60">
+        </div>
+        <button id="btn-masuk-undangan" class="btn-masuk-undangan" onclick="masukUndangan()">
+          <i class="bi bi-envelope-heart"></i> Buka Undangan
+        </button>
+        <p id="layar-nama-error" class="layar-nama-error d-none">Mohon isi nama Anda terlebih dahulu 🙏</p>
+      </div>
+    </div>
+    <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center">
+      <main data-aos="fade-up" data-aos-duration="1500">
+        <h1>Celly <br>&<br> Danar</h1>
+        <p>Wedding invitation</p>
+        <h4 id="hero-kepada">Kepada Bapak/Ibuk/saudara/i <br> ditempat</h4>
+        <a href="#home" class="btn btn-lg btn-open-wedding">Buka Undangan</a>
+      </main>
+    </section>
+    <section id="home" class="home padding-section">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-md-8" data-aos="fade-up">
+            <div class="home-foto-wadah my-4" data-aos="zoom-in" data-aos-delay="200">
+              <img src="img/mempelai.png" alt="Foto Celly & Danar Bersama" class="img-home-pengantin">
+            </div>
+            <p class="mb-1 text-uppercase tracking-wide" style="letter-spacing: 3px; font-family: 'Cormorant Garamond', serif;">The Wedding of</p>
+            <h2>Celly & Danar</h2>
+            <h3 class="mt-2">Minggu, 05 Juli 2026</h3>
+            <div class="simply-countdown"></div>
+             <div class="mt-4" data-aos="zoom-in" data-aos-delay="200">
+              <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Celly+%26+Danar&dates=20260705T080000/20260705T160000&details=Mohon+doa+restu+pada+acara+pernikahan+kami.+Akad+Nikah:+08.00+WIB,+Resepsi:+10.00+WIB.&location=Rumah+Karangmojo+RT06,+RW+02+Tasikmadu&ctz=Asia/Jakarta" target="_blank" class="btn-kalender">
+                <i class="bi bi-calendar-check"></i> Simpan Tanggal di Kalender
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="kalam" class="countdown-bg padding-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center" data-aos="fade-up">
+            <p>QS. Ar-Rum Ayat 21</p>
+            <p class="ayat-arab">وَمِنْ اوُٕمِهۀ أَنْ خَلَقَ لَكُمْ مِّنْ أَنْفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُؤا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗإِنَّ فِيْ ذوٰلِكَ لَاۙيٰتس لِّقَوْمس يَّتَفَكَّرُونَ</p>
+            <p>Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="story" class="info-mempelai padding-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
+          <div class="col-md-8">
+            <h2>Assalamu`alaikum Warahmatullaahi Wabarakaatuh</h2>
+            <p>Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-5 text-center mb-4" data-aos="fade-right" data-aos-delay="200">
+            <div class="frame-foto"><img src="img/danar.JPEG" alt="Danar" class="img-fluid rounded-circle-custom"></div>
+            <h3 class="nama-mempelai mt-3">Danaria Khoirul Anam</h3>
+            <p class="orang-tua">Putra dari Bapak Sudarno S.Pd.SD <br> & (Almh) Ibu Mutmainah</p>
+          </div>
+          <div class="col-md-2 text-center mb-4 simbol-dan" data-aos="zoom-in" data-aos-delay="400"><h1>&</h1></div>
+          <div class="col-md-5 text-center mb-4" data-aos="fade-left" data-aos-delay="200">
+            <div class="frame-foto"><img src="img/celly.JPEG" alt="Celly" class="img-fluid rounded-circle-custom"></div>
+            <h3 class="nama-mempelai mt-3">Celly Umami</h3>
+            <p class="orang-tua">Putri dari (Alm)Bapak Waluyo Susanto <br> & Ibu Sutini</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="info" class="acara padding-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
+          <div class="col-md-8">
+            <h2>Informasi Acara</h2>
+            <p>Pelaksanaan acara pernikahan yang akan diselenggarakan pada:</p>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-md-5 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-acara p-4">
+              <div class="acara-icon-wrap"><i class="bi bi-heart"></i></div>
+              <h3>Akad Nikah</h3>
+              <div class="garis-acara"></div>
+              <p class="acara-hari-label">Minggu, 05 Juli 2026</p>
+              <div class="acara-jam-box">
+                <span class="acara-jam-kecil">Waktu</span>
+                <p class="jam">08.00 WIB</p>
+              </div>
+              <div class="acara-lokasi-row">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="lokasi-detail">Rumah Karangmojo RT06, RW 02 Tasikmadu</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 mb-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-acara p-4">
+              <div class="acara-icon-wrap"><i class="bi bi-stars"></i></div>
+              <h3>Resepsi</h3>
+              <div class="garis-acara"></div>
+              <p class="acara-hari-label">Minggu, 05 Juli 2026</p>
+              <div class="acara-jam-box">
+                <span class="acara-jam-kecil">Waktu</span>
+                <p class="jam">10.00 WIB</p>
+              </div>
+              <div class="acara-lokasi-row">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p class="lokasi-detail">Rumah Karangmojo RT06, RW 02 Tasikmadu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-10 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="peta-wadah shadow-sm mb-3">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.0524710482746!2d110.91889337442116!3d-7.569258792444848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a19c568796199%3A0xe2c3b6ae63d331d8!2sCelly%20And%20Danar%20Wedding!5e0!3m2!1sid!2sid!4v1780292947982!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <a href="https://maps.app.goo.gl/9opj1qxvwyrHuWdk8" target="_blank" class="btn-gmaps btn btn-sm"><i class="bi bi-geo-alt"></i> Buka Peta Digital</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="galery" class="galeri padding-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
+          <div class="col-md-8">
+            <h2>Galeri Foto</h2>
+            <p>Momen bahagia kami yang kami abadikan.</p>
+          </div>
+        </div>
+        <div class="row g-3 img-galer">
+          <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="100"><div class="galeri-item"><img src="img/mempelai.png" alt="Foto 1"></div></div>
+          <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="150"><div class="galeri-item"><img src="img/mempelai2.png" alt="Foto 2"></div></div>
+          <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="150"><div class="galeri-item"><img src="img/mempelai3.png" alt="Foto 3"></div></div>
+          <div class="col-6 col-md-4" data-aos="zoom-in" data-aos-delay="150"><div class="galeri-item"><img src="img/mempelai4.png" alt="Foto 4"></div></div>
+        </div>
+      </div>
+    </section>
+    <div id="gift-trigger" class="gift-trigger-wrap home padding-section">
+      <div class="container text-center" data-aos="fade-up">
+        <h1 class="gift-trigger-desc">Bagi yang ingin memberikan hadiah pernikahan,<br>silakan klik tombol di bawah ini</h1>
+        <button class="btn-buka-gift" onclick="bukaGiftPopup()">
+          <i class="bi bi-gift-fill"></i> Wedding Gift
+        </button>
+      </div>
+    </div>
+    <section id="gift" class="hadiah padding-section" style="display:none!important;">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
+          <div class="col-md-8">
+            <h2>Wedding Gift</h2>
+            <p class="hadiah-subtext">Bagi Bapak/Ibu yang ingin mengirimkan hadiah tanda kasih, dapat melalui rekening atau QR Code di bawah ini:</p>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center align-items-stretch">
+          <div class="col-md-5 mb-4 d-flex" data-aos="fade-right" data-aos-delay="200">
+            <div class="card-hadiah-custom w-100">
+              <div class="hadiah-icon-wrap"><i class="bi bi-bank2"></i></div>
+              <h4>Transfer Bank</h4>
+              <div class="garis-emas"></div>
+              <p class="nama-bank-label">BANK CENTRAL ASIA</p>
+              <div class="rek-box">
+                <p class="rek-box-label">Nomor Rekening</p>
+                <h4 class="no-rek-angka">3270 9699 16</h4>
+              </div>
+              <p class="atas-nama-label">a.n. <strong>Celly Umami</strong></p>
+              <button class="btn-salin" onclick="salinRek(this)" data-norek="3270969916">
+                <i class="bi bi-clipboard"></i> Salin Nomor
+              </button>
+            </div>
+          </div>
+          <div class="col-md-5 mb-4 d-flex" data-aos="fade-left" data-aos-delay="200">
+            <div class="card-hadiah-custom w-100">
+              <div class="hadiah-icon-wrap"><i class="bi bi-qr-code"></i></div>
+              <h4>QRIS / E-Wallet</h4>
+              <div class="garis-emas"></div>
+              <div class="qris-foto-frame">
+                <img src="img/qris.png" alt="QR Code Hadiah" class="img-qris">
+              </div>
+              <div class="wallet-badges"></div>
+              <p class="scan-instruksi">Scan menggunakan aplikasi bank atau e-wallet Anda</p>
+              <a href="img/qris.png" download="QRIS-Danar-Celly.png" class="btn-unduh-qris">
+                <i class="bi bi-download"></i> Unduh QRIS
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="rsvp" class="rsvp padding-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-4" data-aos="fade-up">
+          <div class="col-md-8">
+            <h2>Konfirmasi Kehadiran</h2>
+            <p>Isi formulir di bawah ini untuk mengonfirmasi kehadiran Anda.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="200">
+            <form id="rsvp-form" class="rsvp-form mb-4">
+              <div class="mb-3 rsvp-nama-row">
+                <label class="form-label">Nama Lengkap</label>
+                <div class="rsvp-nama-display">
+                  <i class="bi bi-person-check-fill"></i>
+                  <span id="rsvp-nama-tamu">Tamu</span>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Jumlah Tamu</label>
+                <input type="number" class="form-control" id="rsvp-jumlah" min="1" max="5" value="1" required style="color:rgba(244,224,169,0.7) !important; background:rgba(255,255,255,0.05) !important;">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Konfirmasi</label>
+                <select class="form-select" id="rsvp-status" required style="color:rgba(244,224,169,0.7) !important; background:rgba(22,33,62,0.95) !important;">
+                  <option value="Hadir">Saya akan Hadir</option>
+                  <option value="Tidak Hadir">Maaf, Tidak Bisa Hadir</option>
+                  <option value="Ragu-ragu">Masih Ragu-ragu</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Berikan Ucapan & Doa</label>
+                <textarea class="form-control" id="rsvp-pesan" rows="3" placeholder="Tulis doa restu Anda di sini" required style="color:rgba(244,224,169,0.7) !important; background:rgba(255,255,255,0.05) !important;"></textarea>
+              </div>
+              <button type="submit" class="w-100 btn text-white btn-kirim-rsvp">
+                <i class="bi bi-send"></i> Kirim Konfirmasi
+              </button>
+            </form>
+            <div id="rsvp-sukses" class="rsvp-sukses-box d-none" data-aos="fade-up">
+              <i class="bi bi-check-circle-fill"></i>
+              <p>Terima kasih! Konfirmasi Anda telah kami terima. 🎉</p>
+            </div>
+            <div id="ucapan-section" class="ucapan-section mt-4" data-aos="fade-up">
+              <h5 class="ucapan-title"><i class="bi bi-chat-heart"></i> Ucapan & Doa Tamu</h5>
+              <div id="ucapan-list" class="ucapan-list"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== PENUTUP ===== -->
+    <section id="penutup" class="home padding-section" style="min-height:60vh;">
+      <div class="container text-center" data-aos="fade-up">
+        <h2>Terima Kasih</h2>
+        <p style="color:#000000 !important; font-family:'Cormorant Garamond',serif; font-size:1.1rem; max-width:500px; margin:1rem auto;">
+          Merupakan kebahagiaan bagi kami atas kehadiran dan doa restu Bapak/Ibu/Saudara/i.Mohon maaf tidak bisa mengundang secara fisik. Kehadiran dan doa restu Bapak/Ibu/Saudara/i sangat berarti bagi kami.
+
+Semoga pernikahan kami mendapat ridha-Nya dan membawa berkah
+
+Terimakasih banyak Atas Doa Restu dan Dukungannya.Barakallah lana wa lakum . </p>
+        <div class="garis-emas-nama" style="margin:1.5rem auto;width:120px;"></div>
+        <p style="color:#000000 !important; font-family:'Charm',cursive; font-size:1.3rem;">Celly & Danar</p>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+      simplyCountdown(".simply-countdown", {
+        year: 2026, month: 7, day: 5, zeroPad: true,
+        words: {
+          days:    { lambda: (root, value) => 'Hari',  root: 'Hari'  },
+          hours:   { lambda: (root, value) => 'Jam',   root: 'Jam'   },
+          minutes: { lambda: (root, value) => 'Menit', root: 'Menit' },
+          seconds: { lambda: (root, value) => 'Detik', root: 'Detik' }
+        }
+      });
+    </script>
+    <script>
+      function masukUndangan() {
+        const input = document.getElementById("input-nama-tamu");
+        const nama  = input.value.trim();
+        const err   = document.getElementById("layar-nama-error");
+        if (!nama) { err.classList.remove("d-none"); input.focus(); return; }
+        err.classList.add("d-none");
+        const url = new URL(window.location.href);
+        url.searchParams.set("to", nama);
+        history.replaceState(null, '', url.toString());
+        const heroKepada = document.getElementById('hero-kepada');
+        if (heroKepada) heroKepada.innerHTML = 'Kepada Bapak/Ibuk/saudara/i <br><strong>' + nama + '</strong><br>ditempat';
+        const rsvpNama = document.getElementById('rsvp-nama-tamu');
+        if (rsvpNama) rsvpNama.textContent = nama;
+        const layar = document.getElementById("layar-nama");
+        layar.classList.add("layar-nama-exit");
+        setTimeout(() => { layar.style.display = 'none'; }, 600);
+      }
+      document.getElementById("input-nama-tamu").addEventListener("keydown", function(e) {
+        if (e.key === "Enter") masukUndangan();
+      });
+      (function() {
+        const p = new URLSearchParams(window.location.search);
+        if (p.get("to")) { document.getElementById("layar-nama").style.display = "none"; }
+      })();
+    </script>
+    <script>
+      const params   = new URLSearchParams(window.location.search);
+      const namaTamu = params.get('to') ? decodeURIComponent(params.get('to')) : '';
+      const heroKepada = document.getElementById('hero-kepada');
+      if (namaTamu) {
+        heroKepada.innerHTML = 'Kepada Bapak/Ibuk/saudara/i <br><strong>' + namaTamu + '</strong><br>ditempat';
+      }
+      const rsvpNamaSpan = document.getElementById('rsvp-nama-tamu');
+      rsvpNamaSpan.textContent = namaTamu || 'Tamu Undangan';
+      const STORAGE_KEY = 'ucapan-danar-celly-2026';
+      function getUcapan() {
+        try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
+        catch { return []; }
+      }
+      function simpanUcapan(data) {
+        const list = getUcapan();
+        list.unshift(data);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+      }
+      function ikonStatus(status) {
+        if (status === 'Hadir') return '<span class="badge-hadir"><i class="bi bi-check-circle-fill"></i> Hadir</span>';
+        if (status === 'Tidak Hadir') return '<span class="badge-tidak-hadir"><i class="bi bi-x-circle-fill"></i> Tidak Hadir</span>';
+        return '<span class="badge-ragu"><i class="bi bi-question-circle-fill"></i> Ragu-ragu</span>';
+      }
+      function renderUcapan() {
+        const el = document.getElementById('ucapan-list');
+        const list = getUcapan();
+        if (list.length === 0) {
+          el.innerHTML = '<p class="ucapan-kosong">Belum ada ucapan. Jadilah yang pertama! 💌</p>';
+          return;
+        }
+        el.innerHTML = list.map(u => `
+          <div class="ucapan-item">
+            <div class="ucapan-header">
+              <span class="ucapan-nama"><i class="bi bi-person-circle"></i> ${u.nama}</span>
+              ${ikonStatus(u.status)}
+            </div>
+            <p class="ucapan-pesan" style="color:#FFE87C !important;font-style:italic;">"${u.pesan}"</p>
+            <span class="ucapan-waktu" style="color:rgba(255,232,124,0.7) !important;">${u.waktu}</span>
+          </div>
+        `).join('');
+      }
+      renderUcapan();
+      document.getElementById('rsvp-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btnSubmit = this.querySelector('button[type="submit"]');
+        btnSubmit.disabled = true;
+        btnSubmit.innerHTML = '<i class="bi bi-hourglass-split"></i> Mengirim...';
+        const nama   = rsvpNamaSpan.textContent.trim();
+        const jumlah = document.getElementById('rsvp-jumlah').value;
+        const status = document.getElementById('rsvp-status').value;
+        const pesan  = document.getElementById('rsvp-pesan').value.trim();
+        if (!pesan) { btnSubmit.disabled = false; btnSubmit.innerHTML = '<i class="bi bi-send"></i> Kirim Konfirmasi'; return; }
+        const now   = new Date();
+        const waktu = now.toLocaleDateString('id-ID', { day:'numeric', month:'long', year:'numeric' })
+                    + ' ' + now.toLocaleTimeString('id-ID', { hour:'2-digit', minute:'2-digit' });
+        simpanUcapan({ nama, jumlah, status, pesan, waktu });
+        renderUcapan();
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: 'ce68d1e6-b4d7-43a6-ab2e-744184306577',
+            'Nama Tamu': nama, 'Jumlah Tamu': jumlah,
+            'Status Kehadiran': status, 'Pesan Ucapan Doa': pesan
+          })
+        }).catch(() => {});
+        this.classList.add('d-none');
+        document.getElementById('rsvp-sukses').classList.remove('d-none');
+        setTimeout(() => {
+          document.getElementById('ucapan-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 400);
+      });
+    </script>
+    <script>
+      if (history.scrollRestoration) { history.scrollRestoration = 'manual'; }
+      window.scrollTo(0, 0);
+      document.addEventListener("DOMContentLoaded", function () {
+        const btnOpen     = document.querySelector(".btn-open-wedding");
+        const heroSection = document.getElementById("hero");
+        if (btnOpen && heroSection) {
+          btnOpen.addEventListener("click", function (e) {
+            e.preventDefault();
+            heroSection.classList.add("slide-up-tirai");
+            setTimeout(function () {
+              heroSection.style.display = 'none';
+              document.documentElement.classList.remove("no-scroll");
+              document.body.classList.remove("no-scroll");
+              if (typeof AOS !== 'undefined') { AOS.refresh(); }
+            }, 1000);
+          });
+        }
+      });
+    </script>
+    <script>
+      function salinRek(btn) {
+        const norek = btn.getAttribute('data-norek');
+        navigator.clipboard.writeText(norek).then(() => {
+          btn.classList.add('copied');
+          btn.innerHTML = '<i class="bi bi-check2"></i> Tersalin!';
+          setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.innerHTML = '<i class="bi bi-clipboard"></i> Salin Nomor';
+          }, 2000);
+        });
+      }
+    </script>
+    <script>
+      const audio    = document.getElementById('bgMusic');
+      const btnMusik = document.getElementById('musik-btn');
+      const disc     = btnMusik ? btnMusik.querySelector('.musik-disc') : null;
+      let   isPlaying = false;
+      function setPlay(play) {
+        isPlaying = play;
+        if (disc) disc.classList.toggle('spinning', play);
+        if (btnMusik) btnMusik.classList.toggle('playing', play);
+      }
+      function toggleMusik() {
+        if (isPlaying) { audio.pause(); setPlay(false); }
+        else { audio.play().then(() => setPlay(true)).catch(() => setPlay(false)); }
+      }
+      function tampilkanDanPlay() {
+        document.getElementById('musik-wrap').classList.remove('d-none');
+        audio.play().then(() => setPlay(true)).catch(() => setPlay(false));
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        const btnOpen = document.querySelector('.btn-open-wedding');
+        if (btnOpen) {
+          btnOpen.addEventListener('click', function() {
+            setTimeout(tampilkanDanPlay, 800);
+          });
+        }
+      });
+    </script>
+    <div id="admin-panel" class="admin-panel d-none">
+      <div class="admin-inner">
+        <div class="admin-header">
+          <h5><i class="bi bi-shield-lock"></i> Admin — Kelola Ucapan</h5>
+          <button onclick="document.getElementById('admin-panel').classList.add('d-none')" class="admin-close">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+        <div id="admin-list" class="admin-list"></div>
+        <button class="admin-btn-hapus-semua" onclick="hapusSemuaUcapan()">
+          <i class="bi bi-trash3"></i> Hapus Semua Ucapan
+        </button>
+      </div>
+    </div>
+    <script>
+      (function() {
+        const p = new URLSearchParams(window.location.search);
+        if (p.get('admin') === 'danar2026') {
+          document.getElementById('admin-panel').classList.remove('d-none');
+          renderAdmin();
+        }
+      })();
+      function renderAdmin() {
+        const list = getUcapan();
+        const el   = document.getElementById('admin-list');
+        if (list.length === 0) { el.innerHTML = '<p class="admin-kosong">Belum ada ucapan.</p>'; return; }
+        el.innerHTML = list.map((u, i) => `
+          <div class="admin-item">
+            <div class="admin-item-info">
+              <strong>${u.nama}</strong> — ${u.status}<br>
+              <span>${u.pesan}</span><br>
+              <small>${u.waktu}</small>
+            </div>
+            <button class="admin-btn-hapus" onclick="hapusUcapan(${i})">
+              <i class="bi bi-trash"></i>
+            </button>
+          </div>
+        `).join('');
+      }
+      function hapusUcapan(index) {
+        if (!confirm('Hapus ucapan ini?')) return;
+        const list = getUcapan();
+        list.splice(index, 1);
+        localStorage.setItem('ucapan-danar-celly-2026', JSON.stringify(list));
+        renderAdmin(); renderUcapan();
+      }
+      function hapusSemuaUcapan() {
+        if (!confirm('Hapus SEMUA ucapan? Tidak bisa dibatalkan.')) return;
+        localStorage.removeItem('ucapan-danar-celly-2026');
+        renderAdmin(); renderUcapan();
+      }
+    </script>
+    <script>
+      function bukaGift() {
+        const gift = document.getElementById('gift');
+        const trigger = document.getElementById('gift-trigger');
+        trigger.style.setProperty('display', 'none', 'important');
+        gift.classList.add('aktif');
+        setTimeout(() => { gift.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+      }
+    </script>
+
+    <!-- ===== NAVBAR BAWAH ===== -->
+    <nav id="navbar-bawah" class="navbar-bawah d-none">
+      <a href="#home" class="nav-item" onclick="scrollToSection('home')">
+        <i class="bi bi-house-heart"></i>
+        <span>Beranda</span>
+      </a>
+      <a href="#kalam" class="nav-item" onclick="scrollToSection('kalam')">
+        <i class="bi bi-feather"></i>
+        <span>Kalam</span>
+      </a>
+      <a href="#story" class="nav-item" onclick="scrollToSection('story')">
+        <i class="bi bi-people-fill"></i>
+        <span>Mempelai</span>
+      </a>
+      <a href="#info" class="nav-item" onclick="scrollToSection('info')">
+        <i class="bi bi-calendar-event-fill"></i>
+        <span>Acara</span>
+      </a>
+      <a href="#galery" class="nav-item" onclick="scrollToSection('galery')">
+        <i class="bi bi-images"></i>
+        <span>Galeri</span>
+      </a>
+      <a href="#gift-trigger" class="nav-item" onclick="scrollToSection('gift-trigger')">
+        <i class="bi bi-gift-fill"></i>
+        <span>Gift</span>
+      </a>
+      <a href="#rsvp" class="nav-item" onclick="scrollToSection('rsvp')">
+        <i class="bi bi-envelope-check-fill"></i>
+        <span>RSVP</span>
+      </a>
+      <a href="#penutup" class="nav-item" onclick="scrollToSection('penutup')">
+        <i class="bi bi-heart-fill"></i>
+        <span>Penutup</span>
+      </a>
+    </nav>
+
+    <script>
+      function scrollToSection(id) {
+        const el = document.getElementById(id);
+        if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      }
+
+      // Tampilkan navbar setelah buka undangan
+      document.addEventListener('DOMContentLoaded', function() {
+        const btnOpen = document.querySelector('.btn-open-wedding');
+        if (btnOpen) {
+          btnOpen.addEventListener('click', function() {
+            setTimeout(() => {
+              document.getElementById('navbar-bawah').classList.remove('d-none');
+            }, 1100);
+          });
+        }
+      });
+
+      // Highlight menu aktif saat scroll
+      window.addEventListener('scroll', function() {
+        const sections = ['home','kalam','story','info','galery','rsvp','gift-trigger','gift','penutup'];
+        let current = '';
+        sections.forEach(id => {
+          const el = document.getElementById(id);
+          if (el && window.scrollY >= el.offsetTop - 100) current = id;
+        });
+        document.querySelectorAll('.nav-item').forEach(a => {
+          a.classList.remove('active');
+          if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+        });
+      });
+    </script>
+
+    <!-- ===== POPUP WEDDING GIFT ===== -->
+    <div id="popup-gift" class="popup-gift-overlay" onclick="tutupGiftPopup(event)">
+      <div class="popup-gift-box">
+        <button class="popup-gift-close" onclick="tutupGiftPopup()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <h2 class="popup-gift-title"><i class="bi bi-gift-fill"></i> Wedding Gift</h2>
+        <p class="popup-gift-desc">Bagi Bapak/Ibu yang ingin mengirimkan hadiah tanda kasih, dapat melalui rekening atau QR Code di bawah ini:</p>
+
+        <!-- Transfer Bank -->
+        <div class="popup-gift-card">
+          <div class="hadiah-icon-wrap"><i class="bi bi-bank2"></i></div>
+          <h4>Transfer Bank</h4>
+          <div class="garis-emas"></div>
+          <p class="nama-bank-label">BANK CENTRAL ASIA</p>
+          <div class="rek-box">
+            <p class="rek-box-label">Nomor Rekening</p>
+            <h4 class="no-rek-angka">3270 9699 16</h4>
+          </div>
+          <p class="atas-nama-label">a.n. <strong>Celly Umami</strong></p>
+          <button class="btn-salin" onclick="salinRek(this)" data-norek="3270969916">
+            <i class="bi bi-clipboard"></i> Salin Nomor
+          </button>
+        </div>
+
+        <!-- QRIS -->
+        <div class="popup-gift-card">
+          <div class="hadiah-icon-wrap"><i class="bi bi-qr-code"></i></div>
+          <h4>QRIS / E-Wallet</h4>
+          <div class="garis-emas"></div>
+          <div class="qris-foto-frame">
+            <img src="img/qris.png" alt="QR Code Hadiah" class="img-qris">
+          </div>
+          <p class="scan-instruksi">Scan menggunakan aplikasi bank atau e-wallet Anda</p>
+          <a href="img/qris.png" download="QRIS-Danar-Celly.png" class="btn-unduh-qris">
+            <i class="bi bi-download"></i> Unduh QRIS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function bukaGiftPopup() {
+        document.getElementById('popup-gift').classList.add('aktif');
+        document.body.style.overflow = 'hidden';
+      }
+      function tutupGiftPopup(e) {
+        if (!e || e.target === document.getElementById('popup-gift')) {
+          document.getElementById('popup-gift').classList.remove('aktif');
+          document.body.style.overflow = '';
+        }
+      }
+      // ESC key close
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') tutupGiftPopup();
+      });
+    </script>
+  </body>
+</html>
