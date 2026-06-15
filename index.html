@@ -331,32 +331,7 @@ Terimakasih banyak Atas Doa Restu dan Dukungannya.Barakallah lana wa lakum . </p
         }
       });
     </script>
-    <script>
-      function masukUndangan() {
-        const input = document.getElementById("input-nama-tamu");
-        const nama  = input.value.trim();
-        const err   = document.getElementById("layar-nama-error");
-        if (!nama) { err.classList.remove("d-none"); input.focus(); return; }
-        err.classList.add("d-none");
-        const url = new URL(window.location.href);
-        url.searchParams.set("to", nama);
-        history.replaceState(null, '', url.toString());
-        const heroKepada = document.getElementById('hero-kepada');
-        if (heroKepada) heroKepada.innerHTML = 'Kepada Bapak/Ibuk/saudara/i <br><strong>' + nama + '</strong><br>ditempat';
-        const rsvpNama = document.getElementById('rsvp-nama-tamu');
-        if (rsvpNama) rsvpNama.textContent = nama;
-        const layar = document.getElementById("layar-nama");
-        layar.classList.add("layar-nama-exit");
-        setTimeout(() => { layar.style.display = 'none'; }, 600);
-      }
-      document.getElementById("input-nama-tamu").addEventListener("keydown", function(e) {
-        if (e.key === "Enter") masukUndangan();
-      });
-      (function() {
-        const p = new URLSearchParams(window.location.search);
-        if (p.get("to")) { document.getElementById("layar-nama").style.display = "none"; }
-      })();
-    </script>
+  
     <script>
       const params   = new URLSearchParams(window.location.search);
       const namaTamu = params.get('to') ? decodeURIComponent(params.get('to')) : '';
