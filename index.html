@@ -439,33 +439,7 @@ Terimakasih banyak Atas Doa Restu dan Dukungannya.Barakallah lana wa lakum . </p
         });
       }
     </script>
-    <script>
-      const audio    = document.getElementById('bgMusic');
-      const btnMusik = document.getElementById('musik-btn');
-      const disc     = btnMusik ? btnMusik.querySelector('.musik-disc') : null;
-      let   isPlaying = false;
-      function setPlay(play) {
-        isPlaying = play;
-        if (disc) disc.classList.toggle('spinning', play);
-        if (btnMusik) btnMusik.classList.toggle('playing', play);
-      }
-      function toggleMusik() {
-        if (isPlaying) { audio.pause(); setPlay(false); }
-        else { audio.play().then(() => setPlay(true)).catch(() => setPlay(false)); }
-      }
-      function tampilkanDanPlay() {
-        document.getElementById('musik-wrap').classList.remove('d-none');
-        audio.play().then(() => setPlay(true)).catch(() => setPlay(false));
-      }
-      document.addEventListener('DOMContentLoaded', function() {
-        const btnOpen = document.querySelector('.btn-open-wedding');
-        if (btnOpen) {
-          btnOpen.addEventListener('click', function() {
-            setTimeout(tampilkanDanPlay, 800);
-          });
-        }
-      });
-    </script>
+    
     <div id="admin-panel" class="admin-panel d-none">
       <div class="admin-inner">
         <div class="admin-header">
