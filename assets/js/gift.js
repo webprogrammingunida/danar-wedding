@@ -2,55 +2,63 @@
  * gift.js
  * ---------------------------------------
  * Wedding Gift Module
- * ---------------------------------------
  */
 
-import { $, copy } from "./utils/utils.js";
+import { $, $$, copy } from "./utils/utils.js";
 
 const Gift = (() => {
-
-    const SELECTOR = {
-        trigger: ".btn-buka-gift",
-        section: "#gift"
-    };
 
     const DOM = {};
 
     function cacheDom() {
-        DOM.trigger = $(SELECTOR.trigger);
-        DOM.section = $(SELECTOR.section);
+
+        DOM.section = $("#gift");
+
+        DOM.openButtons = $$(".btn-buka-gift");
+
+        DOM.copyButtons = $$("[data-norek]");
+
     }
 
     function openGift() {
+
         if (!DOM.section) return;
 
-        DOM.section.style.setProperty("display", "block", "important");
+        DOM.section.style.setProperty(
+            "display",
+            "block",
+            "important"
+        );
 
         DOM.section.scrollIntoView({
             behavior: "smooth",
             block: "start"
         });
+
     }
 
-    async function copyAccount(button) {
+    async function handleCopy(button) {
 
-        const account = button.dataset.norek;
+        const rekening = button.dataset.norek;
 
-        if (!account) return;
+        if (!rekening) return;
 
-        const success = await copy(account);
+        const success = await copy(rekening);
 
         if (!success) {
-            alert("Gagal menyalin nomor rekening.");
+
+            alert("Gagal menyalin nomor rekening");
+
             return;
+
         }
 
         const original = button.innerHTML;
 
+        button.disabled = true;
+
         button.innerHTML =
             '<i class="bi bi-check-circle-fill"></i> Tersalin';
-
-        button.disabled = true;
 
         setTimeout(() => {
 
@@ -62,19 +70,38 @@ const Gift = (() => {
 
     }
 
+    function bindEvents() {
+
+        DOM.openButtons.forEach(button => {
+
+            button.addEventListener("click", openGift);
+
+        });
+
+        DOM.copyButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                handleCopy(button);
+
+            });
+
+        });
+
+    }
+
     function init() {
 
         cacheDom();
 
-        // kompatibel dengan onclick di HTML lama
-        window.bukaGiftPopup = openGift;
-
-        window.salinRek = copyAccount;
+        bindEvents();
 
     }
 
     return {
+
         init
+
     };
 
 })();
