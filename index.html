@@ -426,19 +426,7 @@ Terimakasih banyak Atas Doa Restu dan Dukungannya.Barakallah lana wa lakum . </p
         }
       });
     </script>
-    <script>
-      function salinRek(btn) {
-        const norek = btn.getAttribute('data-norek');
-        navigator.clipboard.writeText(norek).then(() => {
-          btn.classList.add('copied');
-          btn.innerHTML = '<i class="bi bi-check2"></i> Tersalin!';
-          setTimeout(() => {
-            btn.classList.remove('copied');
-            btn.innerHTML = '<i class="bi bi-clipboard"></i> Salin Nomor';
-          }, 2000);
-        });
-      }
-    </script>
+    
     
     <div id="admin-panel" class="admin-panel d-none">
       <div class="admin-inner">
@@ -492,15 +480,7 @@ Terimakasih banyak Atas Doa Restu dan Dukungannya.Barakallah lana wa lakum . </p
         renderAdmin(); renderUcapan();
       }
     </script>
-    <script>
-      function bukaGift() {
-        const gift = document.getElementById('gift');
-        const trigger = document.getElementById('gift-trigger');
-        trigger.style.setProperty('display', 'none', 'important');
-        gift.classList.add('aktif');
-        setTimeout(() => { gift.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
-      }
-    </script>
+
 
     <!-- ===== NAVBAR BAWAH ===== -->
     <nav id="navbar-bawah" class="navbar-bawah d-none">
@@ -574,7 +554,7 @@ Terimakasih banyak Atas Doa Restu dan Dukungannya.Barakallah lana wa lakum . </p
     <!-- ===== POPUP WEDDING GIFT ===== -->
     <div id="popup-gift" class="popup-gift-overlay" onclick="tutupGiftPopup(event)">
       <div class="popup-gift-box">
-        <button class="popup-gift-close" onclick="tutupGiftPopup()">
+        <button class="btn-buka-gift">
           <i class="bi bi-x-lg"></i>
         </button>
         <h2 class="popup-gift-title"><i class="bi bi-gift-fill"></i> Wedding Gift</h2>
@@ -612,16 +592,7 @@ Terimakasih banyak Atas Doa Restu dan Dukungannya.Barakallah lana wa lakum . </p
       </div>
     </div>
 
-    <script>
-      function bukaGiftPopup() {
-        document.getElementById('popup-gift').classList.add('aktif');
-        document.body.style.overflow = 'hidden';
-      }
-      function tutupGiftPopup(e) {
-        if (!e || e.target === document.getElementById('popup-gift')) {
-          document.getElementById('popup-gift').classList.remove('aktif');
-          document.body.style.overflow = '';
-        }
+   }
       }
       // ESC key close
       document.addEventListener('keydown', function(e) {
