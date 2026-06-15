@@ -1,5 +1,12 @@
 @import url("variables.css");
 @import url("base.css");
 @import url("layout.css");
+@import url("hero.css");
+@import url("home.css");
+@import url("story.css");
+@import url("galery.css");
 @import url("rsvp.css");
 @import url("gift.css");
+@import url("navbar.css");
+@import url("footer.css");
+
