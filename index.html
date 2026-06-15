@@ -442,45 +442,7 @@ Terimakasih banyak Atas Doa Restu dan Dukungannya.Barakallah lana wa lakum . </p
         </button>
       </div>
     </div>
-    <script>
-      (function() {
-        const p = new URLSearchParams(window.location.search);
-        if (p.get('admin') === 'danar2026') {
-          document.getElementById('admin-panel').classList.remove('d-none');
-          renderAdmin();
-        }
-      })();
-      function renderAdmin() {
-        const list = getUcapan();
-        const el   = document.getElementById('admin-list');
-        if (list.length === 0) { el.innerHTML = '<p class="admin-kosong">Belum ada ucapan.</p>'; return; }
-        el.innerHTML = list.map((u, i) => `
-          <div class="admin-item">
-            <div class="admin-item-info">
-              <strong>${u.nama}</strong> — ${u.status}<br>
-              <span>${u.pesan}</span><br>
-              <small>${u.waktu}</small>
-            </div>
-            <button class="admin-btn-hapus" onclick="hapusUcapan(${i})">
-              <i class="bi bi-trash"></i>
-            </button>
-          </div>
-        `).join('');
-      }
-      function hapusUcapan(index) {
-        if (!confirm('Hapus ucapan ini?')) return;
-        const list = getUcapan();
-        list.splice(index, 1);
-        localStorage.setItem('ucapan-danar-celly-2026', JSON.stringify(list));
-        renderAdmin(); renderUcapan();
-      }
-      function hapusSemuaUcapan() {
-        if (!confirm('Hapus SEMUA ucapan? Tidak bisa dibatalkan.')) return;
-        localStorage.removeItem('ucapan-danar-celly-2026');
-        renderAdmin(); renderUcapan();
-      }
-    </script>
-
+  
 
     <!-- ===== NAVBAR BAWAH ===== -->
     <nav id="navbar-bawah" class="navbar-bawah d-none">
