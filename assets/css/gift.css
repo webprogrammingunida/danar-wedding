@@ -1,1 +1,248 @@
+/* =======================================================
+   WEDDING GIFT
+======================================================= */
 
+.hadiah {
+    position: relative;
+}
+
+/* =======================================================
+   CARD HADIAH
+======================================================= */
+
+.card-hadiah-custom {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+
+    padding: 2rem 1.5rem;
+
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+
+    border: 1px solid rgba(223, 177, 91, .25);
+    border-radius: 20px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+}
+
+.card-hadiah-custom::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-wedding),
+        var(--gold-light),
+        var(--gold-wedding),
+        transparent
+    );
+}
+
+.card-hadiah-custom h4 {
+    margin: 0;
+
+    color: var(--pink);
+
+    font-family: "Charm", cursive;
+    font-size: 1.8rem;
+
+    text-shadow: none;
+}
+
+/* =======================================================
+   BANK
+======================================================= */
+
+.logo-bank-wadah {
+    margin: .25rem 0;
+    padding: 8px 20px;
+
+    background: rgba(255,255,255,.05);
+
+    border: .5px solid rgba(229,186,115,.30);
+    border-radius: 10px;
+}
+
+.nama-bank-label {
+    margin: 0;
+
+    color: #FFE87C !important;
+
+    font-size: .72rem !important;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    text-shadow: none !important;
+}
+
+/* =======================================================
+   REKENING
+======================================================= */
+
+.rek-box {
+    width: 100%;
+    align-self: stretch;
+    flex-shrink: 0;
+
+    padding: 1.2rem 1.5rem;
+
+    text-align: center;
+
+    background: rgba(223,177,91,.07);
+
+    border: 1px solid rgba(223,177,91,.20);
+    border-radius: 12px;
+
+    box-sizing: border-box;
+}
+
+.rek-box-label {
+    margin: 0 0 4px;
+
+    color: #FFE87C !important;
+
+    font-size: .62rem;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    text-shadow: none !important;
+}
+
+.no-rek-angka {
+    margin: 0;
+
+    color: #FFE87C;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    text-shadow: none !important;
+}
+
+.atas-nama-label {
+    margin: 0;
+
+    color: #FFE87C !important;
+
+    font-size: .9rem;
+
+    text-shadow: none !important;
+}
+
+.atas-nama-label strong {
+    color: #ffffff;
+}
+
+/* =======================================================
+   BUTTON SALIN
+======================================================= */
+
+.card-hadiah-custom .btn-salin {
+    margin-top: auto;
+}
+
+.btn-salin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 7px 20px;
+
+    cursor: pointer;
+
+    background: rgba(223,177,91,.10);
+
+    border: 1px solid rgba(223,177,91,.40);
+    border-radius: 20px;
+
+    color: var(--gold-wedding);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: .9rem;
+
+    transition: var(--transition-fast);
+}
+
+.btn-salin:hover {
+    background: rgba(223,177,91,.20);
+}
+
+.btn-salin.copied {
+    background: rgba(46,160,67,.15);
+    border-color: #2ea043;
+    color: #2ea043;
+}
+
+/* =======================================================
+   BADGE E-WALLET
+======================================================= */
+
+.wallet-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.wallet-badges span {
+    padding: 3px 10px;
+
+    background: rgba(255,255,255,.05);
+
+    border: .5px solid rgba(223,177,91,.25);
+    border-radius: 20px;
+
+    color: #FFE87C;
+
+    font-size: .7rem;
+}
+
+/* =======================================================
+   QRIS
+======================================================= */
+
+.qris-foto-frame {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-qris {
+    width: 100%;
+    max-width: 180px;
+
+    border-radius: 12px;
+}
+
+.scan-instruksi {
+    margin: 0;
+    max-width: 200px;
+
+    color: #FFE87C !important;
+
+    font-size: .85rem;
+
+    text-align: center;
+
+    text-shadow: none !important;
+}
