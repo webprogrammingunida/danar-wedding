@@ -1,1 +1,182 @@
+/* =======================================================
+   CARD
+======================================================= */
 
+.card-section {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+
+    border: 1px solid rgba(223, 177, 91, .25);
+    border-radius: 20px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.40);
+}
+
+.card-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-wedding),
+        var(--gold-light),
+        var(--gold-wedding),
+        transparent
+    );
+}
+
+/* =======================================================
+   BUTTON
+======================================================= */
+
+.btn-gold {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 10px 24px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        var(--gold-wedding),
+        var(--pink)
+    );
+
+    color: #0a0a0a;
+
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: var(--transition-fast);
+}
+
+.btn-gold:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: var(--shadow-button-gold);
+}
+
+.btn-outline-gold {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 24px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(223,177,91,.35);
+
+    background: rgba(223,177,91,.08);
+
+    color: var(--gold-light);
+
+    transition: var(--transition-fast);
+}
+
+.btn-outline-gold:hover{
+
+    background: rgba(223,177,91,.18);
+}
+/* =======================================================
+   BADGE
+======================================================= */
+
+.badge-gold{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    padding:4px 12px;
+
+    border-radius:30px;
+
+    background:rgba(223,177,91,.10);
+
+    border:1px solid rgba(223,177,91,.30);
+
+    color:var(--gold-light);
+
+    font-size:.72rem;
+}
+/* =======================================================
+   FORM
+======================================================= */
+
+.form-control-gold,
+.form-select-gold{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(223,177,91,.20);
+
+    color:#fff;
+
+    transition:var(--transition-fast);
+}
+
+.form-control-gold:focus,
+.form-select-gold:focus{
+
+    border-color:var(--gold-wedding);
+
+    box-shadow:0 0 0 .2rem rgba(223,177,91,.18);
+}
+/* =======================================================
+   DIVIDER
+======================================================= */
+
+.divider-gold{
+
+    width:60px;
+    height:2px;
+
+    margin:12px auto;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-light),
+        transparent
+    );
+}
+/* =======================================================
+   AVATAR
+======================================================= */
+
+.avatar-circle{
+
+    overflow:hidden;
+
+    border-radius:50%;
+
+    border:4px solid var(--pink);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
