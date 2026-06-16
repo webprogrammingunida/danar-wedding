@@ -1,1 +1,258 @@
+/* =======================================================
+   EVENT (AKAD & RESEPSI)
+======================================================= */
 
+.acara {
+    position: relative;
+}
+
+/* =======================================================
+   CARD ACARA
+======================================================= */
+
+.card-acara {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+
+    height: 100%;
+
+    padding: 2rem 1.5rem;
+
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+
+    border: 1px solid rgba(223, 177, 91, .25);
+    border-radius: 20px;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .40);
+
+    transition: transform .3s ease;
+}
+
+.card-acara::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-wedding),
+        var(--gold-light),
+        var(--gold-wedding),
+        transparent
+    );
+}
+
+.card-acara:hover {
+    transform: translateY(-5px);
+}
+
+/* =======================================================
+   ICON
+======================================================= */
+
+.acara-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 56px;
+
+    margin-bottom: .25rem;
+
+    border-radius: 50%;
+
+    background: rgba(223, 177, 91, .10);
+    border: 1.5px solid rgba(223, 177, 91, .50);
+
+    color: var(--gold-wedding);
+
+    font-size: 22px;
+}
+
+/* =======================================================
+   JUDUL
+======================================================= */
+
+.card-acara h3 {
+    margin: 0;
+
+    color: #1a1a1a !important;
+
+    font-family: "Charm", cursive;
+    font-size: 1.9rem;
+
+    text-shadow: none !important;
+}
+
+.garis-acara {
+    width: 45px;
+    height: 2px;
+
+    margin: .1rem 0;
+
+    border: none;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-wedding),
+        transparent
+    );
+}
+
+/* =======================================================
+   HARI
+======================================================= */
+
+.acara-hari-label,
+.acara-jam-kecil {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #FFE87C !important;
+
+    font-size: .72rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    text-shadow: none !important;
+}
+
+.acara-jam-kecil {
+    font-size: .62rem;
+}
+
+/* =======================================================
+   JAM
+======================================================= */
+
+.acara-jam-box {
+    width: 100%;
+
+    padding: .5rem 1.5rem;
+
+    text-align: center;
+
+    background: rgba(223,177,91,.07);
+
+    border: 1px solid rgba(223,177,91,.20);
+    border-radius: 12px;
+}
+
+.jam {
+    margin: 0;
+
+    color: var(--gold-wedding) !important;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.9rem !important;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    text-shadow: none !important;
+}
+
+/* =======================================================
+   LOKASI
+======================================================= */
+
+.acara-lokasi-row {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    width: 100%;
+
+    padding: .65rem .9rem;
+
+    text-align: left;
+
+    background: rgba(255,255,255,.04);
+
+    border: .5px solid rgba(255,255,255,.08);
+    border-radius: 10px;
+}
+
+.acara-lokasi-row i {
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    color: var(--gold-wedding);
+
+    font-size: 15px;
+}
+
+.lokasi-detail {
+    margin: 0;
+
+    color: #FFE87C !important;
+
+    font-size: .95rem !important;
+    font-weight: 600;
+
+    line-height: 1.6;
+
+    text-shadow: none !important;
+}
+
+/* =======================================================
+   MAP
+======================================================= */
+
+.peta-wadah {
+    overflow: hidden;
+
+    border-radius: 16px;
+}
+
+.peta-wadah iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+}
+
+/* =======================================================
+   BUTTON MAPS
+======================================================= */
+
+.btn-gmaps {
+    display: inline-block;
+
+    padding: 10px 25px;
+
+    background: var(--pink);
+    color: #000;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: var(--transition-fast);
+}
+
+.btn-gmaps:hover {
+    background: #c9a05e;
+    color: #000;
+}
