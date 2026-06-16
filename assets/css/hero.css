@@ -1,1 +1,98 @@
+/* =======================================================
+   HERO
+======================================================= */
 
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.55)
+        );
+
+    z-index: 0;
+}
+
+.hero > .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* =======================================================
+   HERO CONTENT
+======================================================= */
+
+.hero h1 {
+    margin-bottom: .5rem;
+
+    color: var(--gold-light);
+
+    font-family: "Great Vibes", cursive;
+    font-size: clamp(3rem, 8vw, 5.5rem);
+
+    text-shadow: var(--shadow-text-gold);
+}
+
+.hero h2 {
+    margin-bottom: 1rem;
+
+    color: #ffffff;
+
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    margin-bottom: .5rem;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.15rem;
+}
+
+.hero .tanggal {
+    margin-top: 1rem;
+
+    color: var(--gold-light);
+
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* =======================================================
+   HERO BUTTON
+======================================================= */
+
+.hero .btn {
+    margin-top: 2rem;
+    padding: .85rem 2rem;
+
+    border-radius: 50px;
+    border: none;
+
+    background: var(--gold-wedding);
+    color: #ffffff;
+
+    transition: var(--transition-fast);
+    box-shadow: var(--
