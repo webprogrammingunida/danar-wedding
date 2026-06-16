@@ -1,1 +1,61 @@
+/* =======================================================
+   GLOBAL LAYOUT
+======================================================= */
 
+.padding-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.countdown-bg {
+    position: relative;
+    clip-path: inset(0);
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+.countdown-bg::before {
+
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background-image: url("../images/jaga2.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    z-index: -1;
+
+    pointer-events: none;
+    will-change: transform;
+}
+
+.countdown-bg::after {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(10,10,10,.1) 0%,
+            rgba(10,10,10,.8) 100%
+        );
+
+    pointer-events: none;
+}
+
+.countdown-bg .container {
+    position: relative;
+    z-index: 1;
+}
