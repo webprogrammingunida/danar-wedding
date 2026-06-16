@@ -1,29 +1,103 @@
-.home-subtitle {
-    letter-spacing: 3px;
-    font-family: "Cormorant Garamond", serif;
-    text-transform: uppercase;
-    margin-bottom: .25rem;
-}
-.penutup-section {
-    min-height: 60vh;
+/* =======================================================
+   HOME
+======================================================= */
+
+.home {
+    margin-top: 0 !important;
+    padding-top: 7rem !important;
+    padding-bottom: 5rem;
 }
 
-.penutup-text {
-    color: #000;
-    font-family: "Cormorant Garamond", serif;
+/* =======================================================
+   FOTO OVAL
+======================================================= */
+
+.home-foto-wadah {
+    position: relative;
+    display: inline-block;
+
+    width: 230px;
+    height: 310px;
+
+    padding: 8px;
+
+    background: linear-gradient(
+        135deg,
+        #F4E0A9,
+        #DFB15B,
+        #E5BA73,
+        #F4E0A9
+    );
+
+    border: 3px double #0a0a0a;
+    border-radius: 125px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.5),
+        inset 0 0 20px rgba(0,0,0,.4);
+
+    transition: transform .3s ease;
+}
+
+.home-foto-wadah::before {
+    content: "⚜";
+
+    position: absolute;
+    top: -22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
+    font-size: 2.2rem;
+    color: #1a1a1a;
+
+    text-shadow: 2px 3px 5px rgba(0,0,0,.9);
+}
+
+.home-foto-wadah::after {
+    content: "🔸";
+
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+
     font-size: 1.1rem;
-    max-width: 500px;
-    margin: 1rem auto;
+    color: #DFB15B;
+
+    text-shadow: 2px 2px 4px rgba(0,0,0,.8);
 }
 
-.penutup-signature {
-    color: #000;
-    font-family: "Charm", cursive;
-    font-size: 1.3rem;
+.home-foto-wadah:hover {
+    transform: translateY(-5px);
 }
 
-.garis-emas-nama {
-    margin: 1.5rem auto;
-    width: 120px;
+.img-home-pengantin {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border: 2px solid #0a0a0a;
+    border-radius: 115px;
 }
 
+/* =======================================================
+   SUBTITLE
+======================================================= */
+
+.home-subtitle {
+    margin-bottom: .25rem;
+
+    font-family: "Cormorant Garamond", serif;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
