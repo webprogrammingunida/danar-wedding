@@ -1,1 +1,22 @@
+:root {
+    --pink: #E5BA73;
+    --bg: #0a0a0a;
 
+    --gold-wedding: #DFB15B;
+    --gold-light: #F4E0A9;
+    --ivory-white: #bd8f11;
+
+    --shadow: 1px 1px 2px rgba(0, 0, 0, .6);
+
+    --shadow-text-gold:
+        2px 3px 6px rgba(0,0,0,1),
+        -1px -1px 3px rgba(0,0,0,1),
+        0 0 15px rgba(0,0,0,.9);
+
+    --shadow-button-gold:
+        0 4px 12px rgba(223,177,91,.3);
+
+    --transition-fast: .3s ease;
+    --transition-normal: .5s ease;
+    --transition-slow: 1s ease-in-out;
+}
