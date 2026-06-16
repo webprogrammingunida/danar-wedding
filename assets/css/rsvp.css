@@ -1,1 +1,362 @@
+/* =======================================================
+   RSVP
+======================================================= */
 
+.rsvp {
+    position: relative;
+}
+
+/* =======================================================
+   FORM RSVP
+======================================================= */
+
+.rsvp-form {
+    position: relative;
+    overflow: hidden;
+
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2.5rem;
+
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+
+    border: 1px solid rgba(223,177,91,.25);
+    border-radius: 20px;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+.rsvp-form::before{
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+
+    height:3px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-wedding),
+        var(--gold-light),
+        var(--gold-wedding),
+        transparent
+    );
+}
+
+.rsvp-form .form-label{
+    color:#FFE87C;
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.05rem;
+}
+
+.rsvp-form .form-control,
+.rsvp-form .form-select{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(223,177,91,.20);
+
+    color:#1a1a1a;
+
+    border-radius:8px;
+}
+
+.rsvp-form .form-control:focus,
+.rsvp-form .form-select:focus{
+
+    background:rgba(255,255,255,.07);
+
+    border-color:var(--gold-wedding);
+
+    box-shadow:0 0 0 .2rem rgba(223,177,91,.15);
+
+    color:#1a1a1a;
+}
+
+.rsvp-form .form-control::placeholder{
+    color:#FFE87C;
+}
+
+.rsvp-form .form-select option{
+    background:#16213e;
+    color:#1a1a1a;
+}
+
+/* =======================================================
+   NAMA OTOMATIS
+======================================================= */
+
+.rsvp-nama-row .form-label{
+    color:#FFE87C;
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.05rem;
+}
+
+.rsvp-nama-display{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:10px 16px;
+
+    background:rgba(223,177,91,.08);
+
+    border:1px solid rgba(223,177,91,.25);
+    border-radius:8px;
+
+    color:#1a1a1a;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.15rem;
+
+    letter-spacing:.5px;
+}
+
+.rsvp-nama-display i{
+
+    color:var(--gold-wedding);
+
+    font-size:1.2rem;
+}
+
+/* =======================================================
+   BUTTON RSVP
+======================================================= */
+
+.btn-kirim-rsvp{
+
+    padding:12px;
+
+    background:linear-gradient(
+        135deg,
+        var(--gold-wedding),
+        var(--pink)
+    );
+
+    border:none;
+    border-radius:10px;
+
+    color:#0a0a0a !important;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.1rem;
+    font-weight:bold;
+
+    letter-spacing:.5px;
+
+    transition:var(--transition-fast);
+}
+
+.btn-kirim-rsvp:hover{
+
+    transform:translateY(-1px);
+
+    box-shadow:0 6px 18px rgba(223,177,91,.4);
+}
+
+.btn-kirim-rsvp:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    transform:none;
+}
+
+/* =======================================================
+   SUCCESS
+======================================================= */
+
+.rsvp-sukses-box{
+
+    margin-bottom:1rem;
+    padding:2rem;
+
+    text-align:center;
+
+    background:rgba(46,160,67,.12);
+
+    border:1px solid rgba(46,160,67,.35);
+    border-radius:14px;
+
+    color:#6ee37a;
+}
+
+.rsvp-sukses-box i{
+
+    display:block;
+
+    margin-bottom:.5rem;
+
+    color:#4caf50;
+
+    font-size:2.8rem;
+}
+
+.rsvp-sukses-box p{
+
+    margin:0;
+
+    color:#a8f0b0 !important;
+
+    font-size:1.1rem;
+
+    text-shadow:none !important;
+}
+
+/* =======================================================
+   UCAPAN
+======================================================= */
+
+.ucapan-section{
+
+    margin-top:2rem;
+}
+
+.ucapan-title{
+
+    margin-bottom:1.2rem;
+
+    color:var(--gold-light);
+
+    text-align:center;
+
+    font-family:"Charm",cursive;
+    font-size:1.6rem;
+
+    text-shadow:none;
+}
+
+.ucapan-title i{
+
+    margin-right:6px;
+
+    color:var(--gold-wedding);
+}
+
+.ucapan-list{
+
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+
+    max-height:480px;
+
+    overflow-y:auto;
+
+    padding-right:4px;
+}
+
+.ucapan-list::-webkit-scrollbar{
+    width:5px;
+}
+
+.ucapan-list::-webkit-scrollbar-track{
+    background:rgba(255,255,255,.04);
+}
+
+.ucapan-list::-webkit-scrollbar-thumb{
+    background:rgba(223,177,91,.35);
+}
+
+.ucapan-item{
+
+    position:relative;
+    overflow:hidden;
+
+    padding:1rem 1.2rem;
+
+    background:linear-gradient(145deg,#1a1a2e,#16213e);
+
+    border:1px solid rgba(223,177,91,.25);
+    border-radius:14px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.4);
+}
+
+.ucapan-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    bottom:0;
+    left:0;
+
+    width:3px;
+
+    background:linear-gradient(
+        180deg,
+        var(--gold-wedding),
+        var(--gold-light),
+        var(--gold-wedding)
+    );
+}
+
+.ucapan-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+
+    gap:6px;
+
+    margin-bottom:6px;
+}
+
+.ucapan-nama{
+
+    color:#FFE87C;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:1.05rem;
+    font-weight:600;
+}
+
+.ucapan-nama i{
+
+    margin-right:5px;
+
+    color:var(--gold-wedding);
+}
+
+.badge-hadir,
+.badge-tidak-hadir,
+.badge-ragu{
+
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+
+    padding:3px 10px;
+
+    border-radius:20px;
+
+    font-size:.65rem;
+
+    font-family:"Cormorant Garamond",serif;
+}
+
+.badge-hadir{
+    background:rgba(46,160,67,.15);
+    border:1px solid rgba(46,160,67,.4);
+    color:#6ee37a;
+}
+
+.badge-tidak-hadir{
+    background:rgba(220,53,69,.15);
+    border:1px solid rgba(220,53,69,.35);
+    color:#ff9b9b;
+}
+
+.badge-ragu{
+    background:rgba(255,193,7,.15);
+    border:1px solid rgba(255,193,7,.35);
+    color:#ffe87c;
+}
