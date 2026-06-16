@@ -202,13 +202,15 @@ function restoreGuest() {
 
     if (name && DOM.overlay) {
 
-        DOM.overlay.style.display = "none";
+    DOM.overlay.style.display = "none";
 
-        document.body.classList.remove("no-scroll");
+    document.body.classList.remove("no-scroll");
+    document.documentElement.classList.remove("no-scroll");
 
-        document.documentElement.classList.remove("no-scroll");
+    DOM.heroSection?.classList.add("slide-up-tirai");
 
-    }
+}
+    
 
 }
 
