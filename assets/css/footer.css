@@ -1,1 +1,267 @@
+/* =======================================================
+   FOOTER
+======================================================= */
 
+footer {
+    position: relative;
+
+    padding: 4rem 0 7rem;
+
+    text-align: center;
+
+    background: linear-gradient(
+        180deg,
+        rgba(15,15,15,.96),
+        rgba(8,8,8,1)
+    );
+
+    border-top: 1px solid rgba(223,177,91,.18);
+}
+
+footer::before{
+
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:120px;
+    height:2px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--gold-light),
+        transparent
+    );
+}
+
+/* =======================================================
+   LOGO / NAMA
+======================================================= */
+
+.footer-title{
+
+    margin-bottom:.5rem;
+
+    color:var(--gold-light);
+
+    font-family:"Great Vibes",cursive;
+    font-size:2.5rem;
+
+    text-shadow:var(--shadow-text-gold);
+}
+
+.footer-subtitle{
+
+    margin-bottom:1.8rem;
+
+    color:#FFE87C;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:1rem;
+
+    letter-spacing:2px;
+}
+
+/* =======================================================
+   SOCIAL
+======================================================= */
+
+.footer-social{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:14px;
+
+    margin-bottom:2rem;
+}
+
+.footer-social a{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:rgba(223,177,91,.08);
+
+    border:1px solid rgba(223,177,91,.20);
+
+    color:var(--gold-light);
+
+    transition:var(--transition-fast);
+}
+
+.footer-social a:hover{
+
+    background:rgba(223,177,91,.18);
+
+    transform:translateY(-3px);
+}
+
+.footer-social i{
+
+    font-size:1.15rem;
+}
+
+/* =======================================================
+   COPYRIGHT
+======================================================= */
+
+.footer-copy{
+
+    margin-bottom:.35rem;
+
+    color:#FFE87C;
+
+    font-size:.92rem;
+
+    font-family:"Cormorant Garamond",serif;
+}
+
+.footer-copy strong{
+
+    color:var(--gold-light);
+}
+
+/* =======================================================
+   CREDIT
+======================================================= */
+
+.footer-credit{
+
+    color:rgba(255,255,255,.60);
+
+    font-size:.82rem;
+
+    line-height:1.7;
+}
+
+.footer-credit a{
+
+    color:var(--gold-light);
+
+    transition:var(--transition-fast);
+}
+
+.footer-credit a:hover{
+
+    color:#ffffff;
+}
+
+/* =======================================================
+   WATERMARK
+======================================================= */
+
+.footer-watermark{
+
+    margin-top:1.5rem;
+
+    opacity:.35;
+
+    font-size:.75rem;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+/* =======================================================
+   SPACER NAVBAR
+======================================================= */
+
+.footer-spacer{
+
+    height:80px;
+}
+
+/* =======================================================
+   LOCK SCROLL
+======================================================= */
+
+.no-scroll{
+
+    overflow:hidden;
+    touch-action:none;
+}
+
+/* =======================================================
+   BACK TO TOP
+======================================================= */
+
+.back-to-top{
+
+    position:fixed;
+
+    right:18px;
+    bottom:90px;
+
+    z-index:1030;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:44px;
+    height:44px;
+
+    border-radius:50%;
+
+    background:rgba(223,177,91,.12);
+
+    border:1px solid rgba(223,177,91,.25);
+
+    color:var(--gold-light);
+
+    cursor:pointer;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:var(--transition-fast);
+}
+
+.back-to-top.show{
+
+    opacity:1;
+    visibility:visible;
+}
+
+.back-to-top:hover{
+
+    transform:translateY(-3px);
+
+    background:rgba(223,177,91,.22);
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media (max-width:768px){
+
+    footer{
+
+        padding-bottom:6.5rem;
+    }
+
+    .footer-title{
+
+        font-size:2rem;
+    }
+
+    .footer-social{
+
+        gap:10px;
+    }
+
+}
