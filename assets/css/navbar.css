@@ -1,1 +1,175 @@
+/* =======================================================
+   NAVBAR
+======================================================= */
 
+.navbar-custom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 1050;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    background: rgba(15, 15, 15, .92);
+
+    border-top: 1px solid rgba(223,177,91,.18);
+
+    box-shadow:
+        0 -4px 20px rgba(0,0,0,.35);
+}
+
+/* =======================================================
+   NAV CONTAINER
+======================================================= */
+
+.navbar-custom .container,
+.navbar-custom .container-fluid {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: .45rem .35rem;
+}
+
+/* =======================================================
+   NAV ITEM
+======================================================= */
+
+.navbar-custom .nav-item {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-custom .nav-link {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 4px;
+
+    padding: .45rem;
+
+    color: rgba(255,255,255,.70);
+
+    font-size: .72rem;
+    font-family: "Cormorant Garamond", serif;
+
+    transition: var(--transition-fast);
+}
+
+.navbar-custom .nav-link i {
+
+    font-size: 1.2rem;
+
+    transition: var(--transition-fast);
+}
+
+/* =======================================================
+   ACTIVE
+======================================================= */
+
+.navbar-custom .nav-link.active {
+
+    color: var(--gold-light);
+}
+
+.navbar-custom .nav-link.active i {
+
+    color: var(--gold-wedding);
+
+    transform: translateY(-2px);
+}
+
+/* =======================================================
+   HOVER
+======================================================= */
+
+.navbar-custom .nav-link:hover {
+
+    color: var(--gold-light);
+}
+
+.navbar-custom .nav-link:hover i {
+
+    color: var(--gold-wedding);
+
+    transform: scale(1.08);
+}
+
+/* =======================================================
+   BADGE
+======================================================= */
+
+.navbar-custom .badge {
+
+    margin-top: 2px;
+
+    padding: 2px 8px;
+
+    background: rgba(223,177,91,.15);
+
+    border: 1px solid rgba(223,177,91,.30);
+
+    color: var(--gold-light);
+
+    border-radius: 30px;
+
+    font-size: .55rem;
+}
+
+/* =======================================================
+   ICON ANIMATION
+======================================================= */
+
+.navbar-custom .nav-link i {
+
+    transition:
+        transform var(--transition-fast),
+        color var(--transition-fast);
+}
+
+.navbar-custom .nav-link:active i {
+
+    transform: scale(.9);
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media (max-width:576px){
+
+    .navbar-custom .nav-link{
+
+        font-size:.62rem;
+    }
+
+    .navbar-custom .nav-link i{
+
+        font-size:1.05rem;
+    }
+
+}
+
+@media (min-width:992px){
+
+    .navbar-custom{
+
+        max-width:480px;
+
+        left:50%;
+
+        transform:translateX(-50%);
+
+        border-radius:18px 18px 0 0;
+    }
+
+}
