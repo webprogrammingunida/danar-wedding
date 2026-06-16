@@ -1,1 +1,6 @@
-
+.home-subtitle {
+    letter-spacing: 3px;
+    font-family: "Cormorant Garamond", serif;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+}
